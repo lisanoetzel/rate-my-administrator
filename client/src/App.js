@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+<<<<<<< HEAD
+=======
+import logo from "./logo.svg";
+>>>>>>> master
 import "./App.css";
 
 class App extends Component {
