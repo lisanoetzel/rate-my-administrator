@@ -1,8 +1,8 @@
 {
-  "name": "mern",
+  "name": "rate-my-administrator",
   "version": "1.0.0",
-  "description": "Mern Demo",
-  "main": "server.js",
+  "description": "## About This Boilerplate",
+  "main": "save.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -13,15 +13,20 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisanoetzel/rate-my-administrator.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+  "bugs": {
+    "url": "https://github.com/lisanoetzel/rate-my-administrator/issues"
   },
+  "homepage": "https://github.com/lisanoetzel/rate-my-administrator#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "express": "^4.16.3",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
     "if-env": "^1.0.4"
   }
 }
