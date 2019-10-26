@@ -34,12 +34,13 @@ export default class Survey extends Component {
             return (
                 <div className="container">
                     <div style = {{marginTop: 10}}>
-                    <h2>Survey</h2>
+                    <h2>Administrator Information</h2>
                     <form onSubmit = {this.onSubmit}>
                         <div className = "form-group">
                             <label> Administrator Name (Required)</label>
                             <input type="text" 
                                 className="form-control" 
+                                id="adminName"
                                 value = {this.state.survey_info}
                                 onChange={this.onChangeSurveyInfo}
                             />
@@ -48,6 +49,7 @@ export default class Survey extends Component {
                             <label>Administrator Title (Required)</label>
                             <input type="text" 
                                 className="form-control" 
+                                id="adminTitle"
                                 value = {this.state.survey_info}
                                 onChange={this.onChangeSurveyInfo}
                             />
@@ -55,7 +57,8 @@ export default class Survey extends Component {
                         <div className = "form-group">
                             <label>Institution (Required)</label>
                             <input type="text" 
-                                className="form-control" 
+                                className="form-control"
+                                id="adminInstitution" 
                                 value = {this.state.survey_info}
                                 onChange={this.onChangeSurveyInfo}
                             />
@@ -63,13 +66,50 @@ export default class Survey extends Component {
                         <div className = "form-group">
                             <label>Current Academic Term (Required)</label>
                             <input type="text" 
-                                className="form-control" 
+                                className="form-control"
+                                id="acadTerm" 
                                 value = {this.state.survey_info}
                                 onChange={this.onChangeSurveyInfo}
                             />
                         </div>
                         <hr></hr>
-                        
+                        <h2>Survey Questions</h2>
+                            <div className="form-group">
+                                <h3><strong>Question 1</strong></h3>
+                                <h4>Your administrator is knowledgeable of institutional rules and procedures.</h4>
+                                <select class="form control" id="q1">
+                                    <option value></option> 
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div className="form-group">
+                                <h3><strong>Question 2</strong></h3>
+                                <h4>Your administrator meets frequently with faculty.</h4>
+                                <select class="form control" id="q2">
+                                    <option value></option> 
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div className="form-group">
+                                <h3><strong>Question 3</strong></h3>
+                                <h4>Your administrator is open to faculty input.</h4>
+                                <select class="form control" id="q3">
+                                    <option value></option> 
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Disagree)</option>
+                                    <option value="3">3 (Neutral)</option>
+                                    <option value="4">4 (Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
                     </form>
                 </div>
             </div>

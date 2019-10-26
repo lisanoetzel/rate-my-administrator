@@ -14,7 +14,7 @@ class App extends Component {
       <Router>
          <div className="container">
            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <Link to="/" className="navbar-brand">Home</Link>
+              <Link to="/" className="navbar-brand"><strong>Rate My Administrator</strong></Link>
               <div className="collapse navbar-collapse">
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item active">
@@ -26,7 +26,7 @@ class App extends Component {
                 </ul>
               </div>
             </nav>
-            <h2>Welcome to Rate My Administrator!</h2>
+            {/* <h2>Welcome to Rate My Administrator!</h2> */}
         </div>
 
         <Route path="/" exact component={Home}/>
