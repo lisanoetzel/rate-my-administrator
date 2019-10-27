@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./components/homeComponent";
 import About from "./components/aboutComponent";
+import Account from "./components/accountComponent";
 import Survey from "./components/surveyComponent";
 
 
@@ -21,16 +22,19 @@ class App extends Component {
                   <Link to="/about" className="nav-link">About </Link>
                   </li>
                   <li className="nav-item active">
+                  <Link to="/account" className="nav-link">Create Account </Link>
+                  </li>
+                  <li className="nav-item active">
                   <Link to="/survey" className="nav-link">Survey</Link>
                   </li>
                 </ul>
               </div>
             </nav>
-            {/* <h2>Welcome to Rate My Administrator!</h2> */}
         </div>
 
         <Route path="/" exact component={Home}/>
         <Route path="/about" exact component={About}/>
+        <Route path="/account" exact component={Account}/>
         <Route path="/survey" exact component={Survey}/>
       </Router>
      
