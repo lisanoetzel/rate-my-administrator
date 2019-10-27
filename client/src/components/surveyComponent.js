@@ -110,6 +110,9 @@ export default class Survey extends Component {
                                     <option value="5">5 (Strongly Agree)</option>
                                 </select>
                             </div>
+                            <div className="form-group">
+                                <input type="submit" value="Submit Survey" className="btn btn-primary"/>
+                            </div>
                     </form>
                 </div>
             </div>
