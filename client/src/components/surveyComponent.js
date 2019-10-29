@@ -11,7 +11,7 @@ export default class Survey extends Component {
         this.onChangeSurveyTerm  = this.onChangeSurveyTerm.bind(this);
         this.onChangeSurveyQ1 = this.onChangeSurveyQ1.bind(this);
         this.onChangeSurveyQ2 = this.onChangeSurveyQ2.bind(this);
-        this.onChangeSurveyQ3 = this.onChangeSurveyQ3.bin(this);
+        this.onChangeSurveyQ3 = this.onChangeSurveyQ3.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
