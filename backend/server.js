@@ -28,44 +28,47 @@ surveyRoute.route('/survey').get(function(req, res) {
     });
 });
 
-// todoRoutes.route('/:id').get(function(req, res) {
-//     let id = req.params.id;
-//     Todo.findById(id, function(err, todo) {
-//         res.json(todo);
-//     });
-// });
+surveyRoute.route('/:id').get(function(req, res) {
+    let id = req.params.id;
+    ratemyadministrator.findById(id, function(err, ratemyadministrator) {
+        res.json(ratemyadministrator);
+    });
+});
 
-// todoRoutes.route('/update/:id').post(function(req, res) {
-//     Todo.findById(req.params.id, function(err, todo) {
-//         if (!todo)
-//             res.status(404).send("data is not found");
-//         else
-//             todo.todo_description = req.body.todo_description;
-//             todo.todo_responsible = req.body.todo_responsible;
-//             todo.todo_priority = req.body.todo_priority;
-//             todo.todo_completed = req.body.todo_completed;
+surveyRoute.route('/update/:id').post(function(req, res) {
+    ratemyadministrator.findById(req.params.id, function(err, ratemyadministrator) {
+        if (!ratemyadministrator)
+            res.status(404).send("data is not found");
+        else
+            ratemyadministrator.survey_name = req.body.survey_name;
+            ratemyadministrator.survey_title = req.body.survey_title;
+            ratemyadministrator.survey_institution = req.body.survey_institution;
+            ratemyadministrator.survey_term = req.body.survey_term;
+            ratemyadministrator.survey_q1 = req.body.survey_q1;
+            ratemyadministrator.survey_q2 = req.body.survey_q2;
+            ratemyadministrator.survey_q3 = req.body.survey_q3;
 
-//             todo.save().then(todo => {
-//                 res.json('Todo updated!');
-//             })
-//             .catch(err => {
-//                 res.status(400).send("Update not possible");
-//             });
-//     });
-// });
+            ratemyadministrator.save().then(ratemyadministrator => {
+                res.json('ratemyadministrator updated!');
+            })
+            .catch(err => {
+                res.status(400).send("Update not possible");
+            });
+    });
+});
 
-// todoRoutes.route('/add').post(function(req, res) {
-//     let todo = new Todo(req.body);
-//     todo.save()
-//         .then(todo => {
-//             res.status(200).json({'todo': 'todo added successfully'});
-//         })
-//         .catch(err => {
-//             res.status(400).send('adding new todo failed');
-//         });
-// });
+surveyRoute.route('/add').post(function(req, res) {
+    let ratemyadministrator = new ratemyadministrator(req.body);
+    ratemyadministrator.save()
+        .then(ratemyadministrator => {
+            res.status(200).json({'ratemyadministrator': 'ratemyadministrator added successfully'});
+        })
+        .catch(err => {
+            res.status(400).send('adding new ratemyadministrator failed');
+        });
+});
 
-app.use('/ratemyadministrator', todoSurvey);
+app.use('/ratemyadministrator', ratemyadministrator);
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
